@@ -1,0 +1,96 @@
+doctype html
+html
+    head
+        meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        meta(http-equiv="Content-Security-Policy",content="upgrade-insecure-requests")
+        link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk",crossorigin="anonymous")
+        link(rel="shortcut icon", href="../static/favicon.ico", type="image/x-icon")
+        link(rel="stylesheet", href="../static/style.css")
+        title IndianTodayNews.com
+    body
+        nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.sticky-top
+            a(class="navbar-brand",href="#")
+                img(src="../static/logo.png" alt="" srcset="" width="36" height="36" class="d-block" viewbox="0 0 612 612" role="img" focusable="false")
+            a(class="navbar-brand" href="#")
+                | Inidan Today News
+            button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+                span(class="navbar-toggler-icon")
+            div(class="collapse navbar-collapse" id="navbarSupportedContent")
+                ul(class="navbar-nav mr-auto")
+                    li(class="nav-item active")
+                        a(class="nav-link" href="#newsAccordian")
+                           | Home 
+                           span(class="sr-only")
+                                | (current)
+                    li(class="nav-item")
+                        a(class="nav-link" href="#contact")
+                            | Contact us
+                form(class="form-inline my-2 my-lg-0")
+                    input(id="searchTxt" class="form-control mr-sm-2" type="search" placeholder="Search"
+                    aria-label="Search")
+                    button(id="searchClick" class="btn btn-outline-success my-2 my-sm-0"    type="submit")
+                        | Search
+        div.container.my-2
+            h3
+                | Top News 
+                span.badge.badge-secondary
+                | by Indian Today News
+            hr
+            div#newsAccordian.row.row-cols-1.row-cols-md-2
+        form(action="/contact", method="post",id="contact")
+            h1
+                | Contact us
+            div.form-row
+                div.form-group.col-md-6
+                    label(for="name1")
+                        | Name
+                    input(type="text", name="name",class="form-control",id="name",placeholder="Enter Your name")
+                    small#namevalid.form-text.text-muted.invalid-feedback
+                        | Your username must be 2-10 characters long and should not start with a number
+                div.form-group.col-md-6
+                    label(for="inputEmail41")
+                        | Email
+                    input(type="email", name="inputEmail4",class="form-control",id="email",placeholder="Enter Your mail-id")
+                    small#emailvalid.form-text.text-muted.invalid-feedback
+                        | Your email must be a valid email
+
+            div.form-group
+                label(for="Number1")
+                    | Mobile No.
+                input(type="text", name="Number",class="form-control",id="MobNo",placeholder="Enter Mobile Number")
+                small#phonevalid.form-text.text-muted.invalid-feedback
+                    | Your Mobile Number must be of 10 Digits and should contain only numbers
+            div.form-row
+                div.form-group.col-md-6
+                    label(for="inputCity1")
+                        | City
+                    input(type="text",name="inputCity",class="form-control",id="inputCity",placeholder="Enter Your City")
+                div.form-group.col-md-4
+                    label(for="inputState1")
+                        | State
+                    input(type="text",name="inputState",class="form-control",id="inputState",placeholder="Enter Your State")
+            button(type="submit",id="btn",class="btn btn-primary")
+                | Submit
+            input(type="button", value="Validate Form",id="btn2",class="btn btn-primary")
+            input(type="button", value="Reset",id="btn1",class="btn btn-primary")
+        div.footer
+            a(href="https://github.com/swap2001")
+                i.fab.fa-github.fa-2x.icon1
+            a(href="https://twitter.com/Swa8239416466?s=08")
+                i.fab.fa-twitter.fa-2x.icon1
+            a(href="https://www.linkedin.com/in/swapnil-agrawal-504bba176/")
+                i.fab.fa-linkedin-in.fa-2x.icon1
+            a(href="mailto:swapnilagarwal2001@gmail.com")
+                i.fas.fa-envelope-square.fa-2x.icon1
+            br
+            | CopyRight &copy; Designed By India Today News.
+        script(src="https://use.fontawesome.com/releases/v5.8.0/js/all.js")
+        script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js")
+        script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js")
+        script(src="../static/api.js")
+
